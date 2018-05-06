@@ -6,102 +6,123 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Crete+Round" rel="stylessheet">
+    
     
 </head>
 <body>
     <main>
-        <header>
-            <h1>
-                Where Do I Spend My Funday in TO?
-            </h1>
-        </header>
-        <form action="">
-            <fieldset class="water">
-                <p>choose one</p>
-                <label for="swimmingPool"><img src="images/noun_1516003_cc.svg" alt="swimming pool"></label>
-                <input type="radio" name="water" id="swimmingPool" value=swimmingPool>
-
-                <label for="pond"><img src="images/noun_1036864_cc.svg" alt="pond"></label>
-                <input type="radio" name="water" id="pond" value="pond">
-
-                <label for="beach">
-                    <img src="images/noun_408563_cc.svg" alt="beach">
-                </label>
-                <input type="radio" name="water" id="beach" value="beach">
-            </fieldset>
-
-            <fieldset class="crowd">
-                <p>choose one</p>
-                <label for="hipster"> hipster
-                    <!-- <img src="images/noun_1516003_cc.svg" alt=""> -->
-                </label>
-                <input type="radio" name="crowd" id="hipster" value="hipster">
-            
-                <label for="freakflag"> freakflag
-                    <!-- <img src="images/noun_1036864_cc.svg" alt="pond"> -->
-                </label>
-                <input type="radio" name="crowd" id="freakflag" value="freakflag">
-            
-                <label for="family"> family
-                    <!-- <img src="images/noun_408563_cc.svg" alt=""> -->
-                </label>
-                <input type="radio" name="crowd" id="family" value="family">
-            </fieldset>
-
-            <fieldset class="drink">
-                <p>choose one</p>
-                <label for="coffee"> cofee
-                    <!-- <img src="images/noun_1516003_cc.svg" alt="coffee"> -->
-                </label>
-                <input type="radio" name="drink" id="coffee" value="coffee">
-            
-                <label for="beer"> beer
-                    <!-- <img src="images/noun_1036864_cc.svg" alt="beer"> -->
-                </label>
-                <input type="radio" name="drink" id="beer" value="beer">
-            
-                <label for="byob"> BYOB
-                    <!-- <img src="images/noun_408563_cc.svg" alt="byob"> -->
-                </label>
-                <input type="radio" name="drink" id="byob" value="byob">
-            </fieldset>
-
-            <!-- <fieldset class="price">
-                <p>
-                    <i class="fa fa-money animated tada infinite"></i> How much do you want to pay?</p>
-                <label for="expensive">$$</label>
-                <input type="radio" name="price" id="expensive" value="$$">
-                <label for="cheap">$</label>
-                <input type="radio" name="price" id="cheap" value="$"> -->
-                <div class="submit-container">
-                    <input type="submit" value="What do?!">
-                </div>
-            </fieldset>
-        </form>
-        <section class="results">
-        </section>
-    </main>
-    <form action="">
-
-      
-    </form>
-
+      <div class="wrapper">
+            <header id="header">
+                <h1>
+                    Where do I spend my Funday in Toronto?
+                </h1>
+                <input type="submit" class="takeQuiz" value="Take Quiz">
+            </header>
+            <section id="questions">
+                <form action="">
+                    <fieldset class="water">
+                        <h2>choose a waterhole</h2>
+                       <div class="fieldset__container">
+                        <input type="radio" name="water" id="swimmingPool" value=swimmingPool>
+                            <div class="fieldset__item first">
+                                <label for="swimmingPool">
+                                    <img src="images/pool-edit.png" alt="swimming pool" class="image--swimmingPool">
+                                </label>
+                            </div>
+                            
+                            <input type="radio" name="water" id="pond" value="pond">
+                            <div class="fieldset__item">
+                                <label for="pond">
+                                    <img src="images/pond-edit.png" alt="pond" class="image--pond">
+                                </label>
+                            </div>
+                            
+                            <input type="radio" name="water" id="beach" value="beach">
+                            <div class="fieldset__item">
+                                <label for="beach">
+                                    <img src="images/beach-1.png" alt="beach">
+                                </label>
+                            </div>
+                       </div>
+                    </fieldset>
     
-    <section>
-        <p>images from nounproject</p>
+                    <fieldset class="crowd">
+                        <h2>choose a scene</h2>
+
+                        
+                            <div class="fieldset__container">
+                            <input type="radio" name="crowd" id="hipster" value="hipster" required>
+                            <div class="fieldset__item first">
+                                <label for="hipster">
+                                    <img src="images/millenial-edit.png" alt="">
+                                </label>
+                            </div>
+        
+                            <input type="radio" name="crowd" id="freakflag" value="freakflag">
+                            <div class="fieldset__item">
+                                <label for="freakflag"> 
+                                    <img src="images/butt-edit.png" alt="pond">
+                                </label>
+                            </div>
+                            
+                            <input type="radio" name="crowd" id="family" value="family">
+                            <div class="fieldset__item">
+                                <label for="family"> 
+                                    <img src="images/kid-edit.png" alt="">
+                                </label>
+                            </div>
+                       </div>
+                    </fieldset>
+    
+                    <fieldset class="drink">
+                        <h2>choose a bevy</h2>
+                        <div class="fieldset__container ">
+                            <input type="radio" name="drink" id="coffee" value="coffee" required>
+                            <div class="fieldset__item first">
+                                <label for="coffee"> 
+                                    <img src="images/coffee.png" alt="coffee">
+                                </label>
+                            </div>
+                            
+                            <input type="radio" name="drink" id="beer" value="beer">
+                            <div class="fieldset__item">
+                                <label for="beer">
+                                    <img src="images/beer.png" alt="beer">
+                                </label>
+                            </div>
+                            
+                            <input type="radio" name="drink" id="byob" value="byob" required>
+                            <div class="fieldset__item">
+                                <label for="byob"> 
+                                    <img src="images/waterbottle.png" alt="waterbottle">
+                                </label>
+                            </div>
+                        </div>
+    
+                    </fieldset>
+                    <div class="submit--container">
+                        <input type="submit" class="submit-button" value="What do?!">
+                    </div>
+                    </fieldset>
+                </form>
+    
+            </section>
+            <section class="results" id="results">
+            </section>
+    
+        </div> 
+        <!-- wrapper ends -->
+    </main>
+
+          
+    <!-- <section>
+        <p>images from nounproject:</p>
             <p>beach by DANT</p>
             <p>pond by Becris</p>
             <p>Swimming Pool by priyanka</p>
-            <!-- <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p> -->
-             
-            from the Noun Project
         </p>
-    </section>
+    </section> -->
 </body>
 <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 <script src="script.js"></script>
