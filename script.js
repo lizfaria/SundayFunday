@@ -1,12 +1,12 @@
 // create an array on destinations with a name property that will show in the results at the end, and a features property 
 const destinations = [
     {
-        name: 'the Brickworks <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.3174669069977!2d-79.36862068568914!3d43.68316297912026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cca5aaf70027%3A0x5d82f1b6b4974496!2sBrickworks+at+Don+Valley!5e0!3m2!1sen!2sca!4v1525569192644" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>',
+        name: 'the Brickworks <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.3174669069977!2d-79.36862068568914!3d43.68316297912026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cca5aaf70027%3A0x5d82f1b6b4974496!2sBrickworks+at+Don+Valley!5e0!3m2!1sen!2sca!4v1525569192644" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>',
         features: ['pond', 'coffee', 'family']
     },
 
     {
-        name: 'Hanlan\'s Point beach < iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.281744330049!2d-79.39783998569239!3d43.621494579122455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3540b1efeb1b%3A0x6c5ebb9c1f8d4f0a!2sHanlan&#39;s+Point+Beach!5e0!3m2!1sen!2sca!4v1525568914052" width = "600" height = "250" frameborder = "0" style = "border:0" allowfullscreen ></iframe>',
+        name: 'Hanlan\'s Point beach <iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.281744330049!2d-79.39783998569239!3d43.621494579122455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3540b1efeb1b%3A0x6c5ebb9c1f8d4f0a!2sHanlan&#39;s+Point+Beach!5e0!3m2!1sen!2sca!4v1525568914052" width = "600" height = "250" frameborder = "0" style = "border:0" allowfullscreen ></iframe>',
         features: ['beach','freakFlag', 'byob']
     },
     {
@@ -72,7 +72,7 @@ $(function () {
     });
 
     // add the function answer in an h2 tag to the results sections 
-    $('.results').html(`<h1 class="choice">Go to ${fundayDestination}</h1>`);
+    $('.results').html(`<h1 class="choice">Check out ${fundayDestination}</h1>`);
     });
 
     // when you click the submit button, hide the questions and show the results section

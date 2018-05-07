@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Crete+Round" rel="stylessheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=ABeeZee|Crete+Round" rel="stylessheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Cabin+Sketch:700" rel="stylesheet">
     
     
 </head>
@@ -15,7 +16,7 @@
       <div class="wrapper">
             <header id="header">
                 <h1>
-                    Where do I spend my Funday in Toronto?
+                    Where should you spend this sunnny day in Toronto?
                 </h1>
                 <input type="submit" class="takeQuiz" value="Take Quiz">
             </header>
@@ -27,21 +28,21 @@
                         <input type="radio" name="water" id="swimmingPool" value=swimmingPool>
                             <div class="fieldset__item first">
                                 <label for="swimmingPool">
-                                    <img src="images/pool-edit.png" alt="swimming pool" class="image--swimmingPool">
+                                    <img src="images/pool-edit.png" alt="swimming pool" class="image">
                                 </label>
                             </div>
                             
                             <input type="radio" name="water" id="pond" value="pond">
                             <div class="fieldset__item">
                                 <label for="pond">
-                                    <img src="images/pond-edit.png" alt="pond" class="image--pond">
+                                    <img src="images/pond-edit.png" alt="pond" class="image">
                                 </label>
                             </div>
                             
                             <input type="radio" name="water" id="beach" value="beach">
                             <div class="fieldset__item">
                                 <label for="beach">
-                                    <img src="images/beach-1.png" alt="beach">
+                                    <img src="images/beach-1.png" alt="beach" class="image">
                                 </label>
                             </div>
                        </div>
@@ -55,21 +56,21 @@
                             <input type="radio" name="crowd" id="hipster" value="hipster" required>
                             <div class="fieldset__item first">
                                 <label for="hipster">
-                                    <img src="images/millenial-edit.png" alt="">
+                                    <img src="images/millenial-edit.png" alt="hipster with beard" class="image">
                                 </label>
                             </div>
         
-                            <input type="radio" name="crowd" id="freakflag" value="freakflag">
+                            <input type="radio" name="crowd" id="freakflag" value="freakflag" >
                             <div class="fieldset__item">
                                 <label for="freakflag"> 
-                                    <img src="images/butt-edit.png" alt="pond">
+                                    <img src="images/butt-edit.png" alt="pond" class="image">
                                 </label>
                             </div>
                             
-                            <input type="radio" name="crowd" id="family" value="family">
+                            <input type="radio" name="crowd" id="family" value="family" >
                             <div class="fieldset__item">
                                 <label for="family"> 
-                                    <img src="images/kid-edit.png" alt="">
+                                    <img src="images/kid-edit.png" alt="" class="image">
                                 </label>
                             </div>
                        </div>
@@ -81,21 +82,21 @@
                             <input type="radio" name="drink" id="coffee" value="coffee" required>
                             <div class="fieldset__item first">
                                 <label for="coffee"> 
-                                    <img src="images/coffee.png" alt="coffee">
+                                    <img src="images/coffee.png" alt="coffee" class="image--drink">
                                 </label>
                             </div>
                             
                             <input type="radio" name="drink" id="beer" value="beer">
                             <div class="fieldset__item">
                                 <label for="beer">
-                                    <img src="images/beer.png" alt="beer">
+                                    <img src="images/beer.png" alt="beer" class="image--drink">
                                 </label>
                             </div>
                             
                             <input type="radio" name="drink" id="byob" value="byob" required>
                             <div class="fieldset__item">
                                 <label for="byob"> 
-                                    <img src="images/waterbottle.png" alt="waterbottle">
+                                    <img src="images/waterbottle.png" alt="waterbottle" class="image--drink">
                                 </label>
                             </div>
                         </div>
@@ -108,6 +109,7 @@
                 </form>
     
             </section>
+            
             <section class="results" id="results">
             </section>
     
@@ -115,14 +117,16 @@
         <!-- wrapper ends -->
     </main>
 
-          
-    <!-- <section>
-        <p>images from nounproject:</p>
-            <p>beach by DANT</p>
-            <p>pond by Becris</p>
-            <p>Swimming Pool by priyanka</p>
+    <!--FOOTER -->
+    <div class="copyright">
+        <p>Created by Liz Faria 2018</p>
+        <P>Icons from
+            <a href="https://thenounproject.com/">The Noun Project</a>
         </p>
-    </section> -->
+    </div>
+
+    
+
 </body>
 <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 <script src="script.js"></script>

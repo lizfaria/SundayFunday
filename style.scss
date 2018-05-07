@@ -7,10 +7,8 @@ $black: #101010;
 $white: whitesmoke;
 
 // fonts
-$headerFont:'Crete Round', serif;
-$bodyFont: 'ABeeZee', sans-serif;
-
-
+$headerFont: 'Cabin Sketch', cursive;
+$bodyFont: 'Cabin', sans-serif;
 
 img {
     max-width: 100%;
@@ -32,11 +30,13 @@ body {
     display:flex;
     justify-content: center;
 }
+
 input[type="radio"] {
     display:none;
 }
-  input[type="submit"] {
-    margin: 100px 0 0 0;
+
+input[type="submit"] {
+    margin: 0 auto 20px;
     font-family: $bodyFont;
     font-weight: bold;
     border: 1px $black solid;
@@ -48,6 +48,8 @@ input[type="radio"] {
     width: 120px;
     height: 44px;
 
+     
+
     border-radius: 10px;    
         &:hover {
         box-shadow: inset 4px 2px 0 lighten($orange, 20%);
@@ -58,72 +60,75 @@ input[type="radio"] {
 
 header, .results {
     text-align:center;
-    top: calc(50% - 191px);
+    top: calc(50% - 225px);
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.9);
     border: $white double 2px;
-    padding: 40px;
     position: absolute;
     display:flex;
     flex-direction:column;
     justify-content: center;
     align-items:center;
+    border: 3px solid black;
+    box-shadow: inset 2px 2px 0 0 $orange;
+    border-radius: 30px;
+
     h1 {
         color: $black;
         font-size: 60px;
         font-family: $headerFont;
         margin: 0 auto;
-        padding: 0;
+        padding: 20px 10px;
         text-shadow: 1px 1px 2px $red;
         max-width:700px;
     }
-
 }
 
 .submit--container {
-display: flex;
-justify-content: center;
-    input[type="submit"] {
-        margin: 0;
-    }
+    display: flex;
+    justify-content: center;
+        input[type="submit"] {
+            margin: 0;
+        }
 }
 
+#questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
 fieldset {
     border: none;
 
     h2 {
-    text-align: center;
-    font-family: $headerFont;
-    background-color: $black;
-    // text-shadow: 1px 1px 2px $red;
-    color: rgba(247,148,29,0.6);
-    width: 170px;
-    margin: 0 auto;
-    position: relative;
-    margin: 0 auto 5px;
-    font-size: 1.2rem;
-    border: 5px solid $orange;
-    border-radius: 10px;
-    
-
-        // &::after {
-        //     content: ""; 
-        //     position: absolute; 
-        //     left: 0; 
-        //     bottom: 0; 
-        //     width: 0; 
-        //     height: 0; 
-           
-        // }
+        text-align: center;
+        font-family: $headerFont;
+        background-color: $black;
+        color: $white;
+        width: 100%;
+        height:30px;
+        margin: 0 auto;
+        position: relative;
+        margin: 0 auto 10px;
+        font-size: 1.2rem;
+        box-shadow: inset 2px 3px 0 0 $orange,
+        2px 2px darken($orange, 30%); 
+        border-radius: 30px 0 30px 0;
+        line-height:1.6;
     }
 
     .fieldset__container {
         display:grid;
         grid-template-rows: 100px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 2px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
         border: none;
+
+        @media(max-width: 480px) {
+            grid-gap:2%;
+        }
         
 
         input[type='radio']:checked + .fieldset__item {
@@ -135,44 +140,57 @@ fieldset {
             border: 3px solid black;
             box-shadow: inset 2px 2px 0 0 $orange;
             border-radius: 30%;
-            
             background-color: rgba(255,255,255,0.9);
             display: flex;
             justify-content: center;
             align-items:center;
 
-            &.first {
-            grid-column: 2;
+            &:hover {
+                background-color:rgba(247,148,29,0.3);
             }
-
-//             &:active {
-//     background-color: yellow;
-// }
         
             label {
-            display: flex;
-            justify-content: center;
-            align-items:center;
+                display: flex;
+                justify-content: center;
+                align-items:center;
             }
 
-            img {
+            .image {
                 max-width:90px;
                 max-height:80px
             }
 
-             
-            // .image--swimmingPool{
-            //     max-width: 75%;
-            // }
-            // .image--pond {
-            //     max-width: 80%;
-            // }
-        }
-        
+            .image--drink {
+                max-width:120px;
+                max-height:120px;
+            }
+        }   
     }
 }
 
-.results {
+.copyright {
+    display:flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    font-family: sans-serif;
+    font-size:.8rem;
+    color:$black;   
+    position:fixed;
+    bottom:0px;
+    width: 100vw;
+    padding:0;
+    margin: 0;
+
+    a {
+    color:$black;
+    text-decoration:none;
+
+        &:hover {
+            border-bottom:1px solid black;
+        }
+    }
 
 }
+
+
 
