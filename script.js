@@ -20,10 +20,12 @@ const destinations = [
 $(function () { 
     // when page loads, immediately hide the questions and results. when you click the input with the name of take quiz, show the questions section 
     $('#questions').hide();
+    $('.copyright--logo').hide(); 
     $('#results').hide();
 
     $('.takeQuiz').on('click', function () {
         $('#header').hide();
+        $(`.copyright--logo`).hide();
         $('#questions').fadeIn();
     });
 
@@ -79,6 +81,7 @@ $(function () {
     $('.submit-button').on('click', function () {
     $('#questions').hide();
     $('#results').fadeIn();
+    $(`.copyright--logo`).fadeIn();
     });
 
 });
