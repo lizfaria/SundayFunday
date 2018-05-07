@@ -6,11 +6,11 @@ const destinations = [
     },
 
     {
-        name: 'Hanlan\'s Point beach <iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.281744330049!2d-79.39783998569239!3d43.621494579122455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3540b1efeb1b%3A0x6c5ebb9c1f8d4f0a!2sHanlan&#39;s+Point+Beach!5e0!3m2!1sen!2sca!4v1525568914052" width = "600" height = "250" frameborder = "0" style = "border:0" allowfullscreen ></iframe>',
+        name: 'Hanlan\'s Point beach <iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.281744330049!2d-79.39783998569239!3d43.621494579122455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3540b1efeb1b%3A0x6c5ebb9c1f8d4f0a!2sHanlan&#39;s+Point+Beach!5e0!3m2!1sen!2sca!4v1525568914052" width = "100%" height = "250" frameborder = "0" style = "border:0" allowfullscreen ></iframe>',
         features: ['beach','freakFlag', 'byob']
     },
     {
-        name: 'Trinity Bellwoods park <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11548.34664900272!2d-79.41462123037292!3d43.6463652659413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34fb59eedcdb%3A0x3fb22c8aefb75bb!2sTrinity+Bellwoods+Park!5e0!3m2!1sen!2sca!4v1525569126838" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>',
+        name: 'Trinity Bellwoods park <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11548.34664900272!2d-79.41462123037292!3d43.6463652659413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34fb59eedcdb%3A0x3fb22c8aefb75bb!2sTrinity+Bellwoods+Park!5e0!3m2!1sen!2sca!4v1525569126838" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>',
         features: ['swimmingPool', 'beer', 'coffee', 'hipsters']
     }
 ];
@@ -61,7 +61,7 @@ $(function () {
         return total.concat(amount);
     });
 
-    // loop through flat array and count occurences of object using countBy underscore 
+    // loop through flat array to count occurences of object using countBy underscore 
     const count = _.countBy(flat, function(obj) {
         return obj.name.replace("","")
     });
