@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>🌞 Sunny Day Quiz 🌞</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=ABeeZee|Crete+Round" rel="stylessheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Cabin|Cabin+Sketch:700" rel="stylesheet">
-    
-    
 </head>
 <body>
     <main>
       <div class="wrapper">
+
             <header id="header">
                 <h1>
-                    Where should you spend this sunnny day in Toronto?
+                    Where should you spend this sunny day in Toronto?
                 </h1>
                 <input type="submit" class="takeQuiz" value="Take Quiz">
             </header>
+
+            <!-- QUESTIONS SECTION BEGINS -->
             <section id="questions">
                 <form action="">
+                    <!-- water category begins -->
                     <fieldset class="water">
                         <h2>choose a waterhole</h2>
+
                        <div class="fieldset__container">
                         <input type="radio" name="water" id="swimmingPool" value=swimmingPool>
                             <div class="fieldset__item first">
@@ -47,11 +49,39 @@
                             </div>
                        </div>
                     </fieldset>
-    
+                    <!-- water category ends -->
+                    <!-- drink category begins -->
+                    <fieldset class="drink">
+                        <h2>choose a bevy</h2>
+
+                        <div class="fieldset__container ">
+                            <input type="radio" name="drink" id="coffee" value="coffee" required>
+                            <div class="fieldset__item first">
+                                <label for="coffee">
+                                    <img src="images/coffee.png" alt="coffee" class="image--drink">
+                                </label>
+                            </div>
+                    
+                            <input type="radio" name="drink" id="beer" value="beer">
+                            <div class="fieldset__item">
+                                <label for="beer">
+                                    <img src="images/beer.png" alt="beer" class="image--drink">
+                                </label>
+                            </div>
+                    
+                            <input type="radio" name="drink" id="water" value="water" required>
+                            <div class="fieldset__item">
+                                <label for="water">
+                                    <img src="images/waterbottle.png" alt="waterbottle" class="image--drink">
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- drink caregory ends -->
+                    <!-- crowd category begins -->
                     <fieldset class="crowd">
                         <h2>choose a scene</h2>
 
-                        
                             <div class="fieldset__container">
                             <input type="radio" name="crowd" id="hipster" value="hipster" required>
                             <div class="fieldset__item first">
@@ -60,9 +90,9 @@
                                 </label>
                             </div>
         
-                            <input type="radio" name="crowd" id="freakflag" value="freakflag" >
+                            <input type="radio" name="crowd" id="freakFlag" value="freakFlag" >
                             <div class="fieldset__item">
-                                <label for="freakflag"> 
+                                <label for="freakFlag"> 
                                     <img src="images/butt-edit.png" alt="pond" class="image">
                                 </label>
                             </div>
@@ -75,52 +105,30 @@
                             </div>
                        </div>
                     </fieldset>
-    
-                    <fieldset class="drink">
-                        <h2>choose a bevy</h2>
-                        <div class="fieldset__container ">
-                            <input type="radio" name="drink" id="coffee" value="coffee" required>
-                            <div class="fieldset__item first">
-                                <label for="coffee"> 
-                                    <img src="images/coffee.png" alt="coffee" class="image--drink">
-                                </label>
-                            </div>
-                            
-                            <input type="radio" name="drink" id="beer" value="beer">
-                            <div class="fieldset__item">
-                                <label for="beer">
-                                    <img src="images/beer.png" alt="beer" class="image--drink">
-                                </label>
-                            </div>
-                            
-                            <input type="radio" name="drink" id="byob" value="byob" required>
-                            <div class="fieldset__item">
-                                <label for="byob"> 
-                                    <img src="images/waterbottle.png" alt="waterbottle" class="image--drink">
-                                </label>
-                            </div>
-                        </div>
-    
-                    </fieldset>
+                    <!-- crowd category ends -->
+                    
                     <div class="submit--container">
                         <input type="submit" class="submit-button" value="What do?!">
                     </div>
-                </fieldset>
+            
                 </form>
-                
-    
             </section>
+            <!-- QUESTIONS SECTION ENDS -->
+
+            <!-- RESULTS SECTION BEGINS -->
             <section class="results" id="results">
             </section>
-    
-        </div> 
-        <!-- wrapper ends -->
+            <!-- RESULTS SECTION ENDS -->
+
+        </div> <!-- wrapper ends -->
     </main>
+    <!-- MAIN ENDS -->
 
     <!--FOOTER -->
     <div class="copyright--logo">
         <img src="images/liz_logo.svg" alt="logo that says Liz Faria" class="logo">
     </div>
+    <!-- FOOTER ENDS -->
 
     
     <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
@@ -128,6 +136,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
 </body>
-
-
 </html>
