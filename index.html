@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>🌞 Sunny Day Quiz 🌞</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Cabin+Sketch:700" rel="stylesheet">
 </head>
 <body>
     <main>
-      <div class="wrapper">
-
+        
+        <div class="wrapper header__wrapper">
             <header id="header">
                 <h1>
                     Where should you spend this sunny day in Toronto?
                 </h1>
                 <input type="submit" class="takeQuiz" value="Take Quiz">
             </header>
+        </div>
 
             <!-- QUESTIONS SECTION BEGINS -->
-            <section id="questions">
+            <section id="questions" class="questions__wrapper">
+                <div class="wrapper">
                 <form action="">
                     <!-- water category begins -->
                     <fieldset class="water">
@@ -108,27 +110,37 @@
                     <!-- crowd category ends -->
                     
                     <div class="submit--container">
-                        <input type="submit" class="submit-button" value="What do?!">
+                        <input type="submit" class="submit-button question--submit" value="What do?!">
                     </div>
             
                 </form>
+            </div>
             </section>
             <!-- QUESTIONS SECTION ENDS -->
 
             <!-- RESULTS SECTION BEGINS -->
-            <section class="results" id="results">
-            </section>
+            <div class="wrapper results__wrapper">
+                <section id="results">
+                    <h1 class="error">Please reset & answer all questions to see results</h1>
+                    <button class="reset">reset</button>
+                </section>
+            </div>
             <!-- RESULTS SECTION ENDS -->
 
-        </div> <!-- wrapper ends -->
-    </main>
+      
+    
     <!-- MAIN ENDS -->
 
     <!--FOOTER -->
-    <div class="copyright--logo">
-        <img src="images/liz_logo.svg" alt="logo that says Liz Faria" class="logo">
-    </div>
+    <footer>
+        
+        <div class="copyright--logo">
+            <img src="images/liz_logo.svg" alt="logo that says Liz Faria" class="logo">
+        </div>
+    </footer>
     <!-- FOOTER ENDS -->
+
+    </main>
 
     
     <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>

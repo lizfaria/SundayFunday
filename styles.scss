@@ -1,0 +1,207 @@
+
+// colors
+$red: #ED1C24; 
+$orange: #f9ba48;
+$grey: #BDBEC0;
+$black: #101010;
+$white: whitesmoke;
+
+// fonts
+$headerFont: 'Cabin Sketch', cursive;
+$bodyFont: 'Cabin', sans-serif;
+
+.questions__wrapper {
+    display: none;
+}
+footer {
+    display: none;
+}
+.results__wrapper {
+    display: none;
+}
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: $bodyFont;
+    background-image: url(images/naranjas.png);
+}
+
+main {
+    margin: 0 auto;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.wrapper {
+    max-width:1000px;
+    max-height:950px;
+    border-radius:10px;
+    // height:60%;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow:2px 2px 1px 0px #ccc;
+    padding: 5%;
+}
+
+header {
+    border-radius:10px;
+    position: relative;;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+h1 {
+    color: $black;
+    font-size: 5rem;
+    font-family: $headerFont;
+    margin: 0 auto 5%;
+    text-shadow: 1px 1px 2px $red;
+    width:80%;
+    text-align:center;
+
+    @media(max-width:825px) {
+        font-size:4rem;
+    }
+    @media(max-width:660px) {
+        font-size:3rem;
+    }
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="submit"], button {
+    width: 100%;
+    height: 80px;
+    margin: 3% auto 20px;
+    font-family: $bodyFont;
+    font-weight: bold;
+    font-size:3.5rem;
+    text-align:center;
+    color:$white;
+    background-color: $orange;
+    box-shadow: 
+    inset 2px 2px 0 lighten($orange, 20%);
+    border-radius: 10px;    
+    border: none;
+    transition: all .4s ease-in-out;
+    text-align:center;
+    cursor: pointer;
+
+        &:hover {
+        box-shadow: inset 4px 2px 0 lighten($orange, 20%);
+        border: none;
+        color: $red;
+        }
+    }
+    
+#questions input[type="submit"] {
+            width:100%;
+}
+
+#questions {
+    form {
+        border:none;
+        max-width:100%;
+        max-height:80%;
+        padding:5%;
+        border: 3px solid orange;
+        border-radius:10px;
+        // height: 70vh;
+        fieldset {
+             max-width:100%;
+             border:none;
+            h2 {
+                text-align:center;
+                font-size:2rem;
+                margin: 0 0 5% 0;
+                border-bottom: 1px solid $orange;
+                border-top: 1px solid $orange;
+                @media(max-width:900px) {
+                    font-size:1.5rem;
+                }
+            }
+            .fieldset__container {
+                display:flex; 
+                min-width:100%;
+                border:none;
+                @media(max-width:550px) {
+                    max-height:100px;
+                }
+                
+                .fieldset__item {
+                    text-align:center;
+                    width:33%;
+                    transition:all .3s ease-in-out;
+                    border-radius: 10px;
+                    
+                     &:hover {
+                        // width:38%;
+                        background-color:$orange;
+                        border: 3px solid $red;
+                    }
+                    .image {
+                        max-width: 40%;
+                        @media(max-width:550px) {
+                            max-width:75%;
+                        }
+                    }
+                    .image--drink {
+                        max-width: 70%;
+                        @media(max-width:550px) {
+                            max-width:100%;
+                        }
+                    }
+                }
+            }
+        }
+        input[type='radio']:checked + .fieldset__item {
+             border:3px solid $white;
+            //  width:38%;
+             max-height:112px;
+             background-color:$orange;
+             border: 3px solid $red;
+         }
+
+        .question--submit {
+
+            @media(max-width:900px) {
+                font-size:2rem;
+            }
+        }
+    }
+}
+
+#results {
+    border: 3px solid orange;
+    border-radius:10px;
+    padding: 5%;
+
+    .error {
+        @media(max-width:695px) {
+            font-size:3rem;
+        }
+    }
+    iframe {
+        border:5px solid $orange;
+        margin-top: 5%;
+        box-shadow:2px 2px 1px 0px #ccc;
+    }
+}
+
+footer {
+    width: 100%; 
+    position:absolute;
+    bottom: 0;
+    text-align:center;
+}

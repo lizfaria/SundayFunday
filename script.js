@@ -76,22 +76,22 @@ app.randomDestination = function (number) {
 
 app.renderFinalDestination = function (fundayDestination, randomDestination) {
     if (app.count > 1) {
-        return $('.results').html(`<h1 class="choice">Check out ${fundayDestination}</h1>`);
+        return $('.results__wrapper').html(`<h1 class="choice">Check out ${fundayDestination}</h1><button class="reset">reset</button>`); 
     } else {
-        return $('.results').html(`<h1 class="choice">Check out ${app.randomDestination(app.countArray)}</h1>`);
+        return $('.results__wrapper').html(`<h1 class="choice">Check out ${app.randomDestination(app.countArray)}</h1><button class="reset">reset</button>`);
     }
 }
 
 app.events = function () {
     // when page loads, immediately hide the questions and results. when you click the input with the name of take quiz, show the questions section 
-    $('#questions').hide();
-    $('.copyright--logo').hide();
-    $('#results').hide();
+    // $('.questions__wrapper').hide();
+    // $('footer').hide();
+    // $('.results__wrapper').hide();
 
     $('.takeQuiz').on('click', function () {
-        $('#header').hide();
-        $(`.copyright--logo`).hide();
-        $('#questions').fadeIn();
+        $('.header__wrapper').hide();
+        $(`footer`).hide();
+        $('.questions__wrapper').fadeIn();
     });
 
     $('form').on('submit', function (e) {
@@ -103,10 +103,24 @@ app.events = function () {
     });
 
     $('.submit-button').on('click', function () {
-        $('#questions').hide();
-        $('#results').fadeIn();
-        $(`.copyright--logo`).fadeIn();
+        $('.questions__wrapper').hide();
+        $('.results__wrapper').fadeIn();
+        $(`footer`).fadeIn();
     });
+
+    $('.reset').on('click', function () {
+        $('.header__wrapper').fadeIn();
+        $('.questions__wrapper').hide();
+        $('footer').hide();
+        $('.results__wrapper').hide();
+    })
+
+    $('.results__wrapper').on('click', '.reset', function () {
+        $('.header__wrapper').fadeIn();
+        $('.questions__wrapper').hide();
+        $('footer').hide();
+        $('.results__wrapper').hide();
+    })
 }
 app.init = function () {
     app.events();
