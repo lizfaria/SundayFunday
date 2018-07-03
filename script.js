@@ -2,15 +2,17 @@ const app = {};
 
 app.destinations = [
     {
-        name: 'the Brickworks <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.3174669069977!2d-79.36862068568914!3d43.68316297912026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cca5aaf70027%3A0x5d82f1b6b4974496!2sBrickworks+at+Don+Valley!5e0!3m2!1sen!2sca!4v1525569192644" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>',
+        name: `
+        the Brickworks 
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.3174669069977!2d-79.36862068568914!3d43.68316297912026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cca5aaf70027%3A0x5d82f1b6b4974496!2sBrickworks+at+Don+Valley!5e0!3m2!1sen!2sca!4v1525569192644" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe><a class="tell-me-more" target="_blank" href="https://www.evergreen.ca/evergreen-brick-works/">tell me more</a> `,
         features: ['pond', 'coffee', 'family']
     },
     {
-        name: 'Hanlan\'s Point beach <iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.281744330049!2d-79.39783998569239!3d43.621494579122455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3540b1efeb1b%3A0x6c5ebb9c1f8d4f0a!2sHanlan&#39;s+Point+Beach!5e0!3m2!1sen!2sca!4v1525568914052" width = "100%" height = "250" frameborder = "0" style = "border:0" allowfullscreen ></iframe>',
+        name: 'Hanlan\'s Point beach <iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.281744330049!2d-79.39783998569239!3d43.621494579122455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3540b1efeb1b%3A0x6c5ebb9c1f8d4f0a!2sHanlan&#39;s+Point+Beach!5e0!3m2!1sen!2sca!4v1525568914052" width = "100%" height = "250" frameborder = "0" style = "border:0" allowfullscreen ></iframe><a class="tell-me-more" target="_blank" href="https://www.blogto.com/sports_play/2012/07/toronto_beaches_hanlans_point_beach/">tell me more</a>',
         features: ['beach', 'water', 'freakFlag']
     },
     {
-        name: 'Trinity Bellwoods park <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11548.34664900272!2d-79.41462123037292!3d43.6463652659413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34fb59eedcdb%3A0x3fb22c8aefb75bb!2sTrinity+Bellwoods+Park!5e0!3m2!1sen!2sca!4v1525569126838" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>',
+        name: 'Trinity Bellwoods Park <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11548.34664900272!2d-79.41462123037292!3d43.6463652659413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34fb59eedcdb%3A0x3fb22c8aefb75bb!2sTrinity+Bellwoods+Park!5e0!3m2!1sen!2sca!4v1525569126838" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe><a class="tell-me-more" target="_blank" href="https://www.blogto.com/sports_play/2012/07/toronto_parks_trinity_bellwoods_park/">tell me more</a>',
         features: ['swimmingPool', 'beer', 'hipster']
     }
 ];
@@ -75,18 +77,17 @@ app.randomDestination = function (number) {
 }
 
 app.renderFinalDestination = function (fundayDestination, randomDestination) {
+
     if (app.count > 1) {
-        return $('.results__wrapper').html(`<h1 class="choice">Check out ${fundayDestination}</h1><button class="reset">reset</button>`); 
+        return $('.results__wrapper').html(`<h1 class="choice">Check out ${fundayDestination}</h1><button class="reset"><i class="fas fa-undo"></i> reset</button>`); 
     } else {
-        return $('.results__wrapper').html(`<h1 class="choice">Check out ${app.randomDestination(app.countArray)}</h1><button class="reset">reset</button>`);
+        return $('.results__wrapper').html(`<h1 class="choice">Check out ${app.randomDestination(app.countArray)}</h1><button class="reset"><i class="fas fa-undo"></i> Reset</button><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Take this quiz to find out where your adventure in #Toronto begins today: " data-url="http://lizfaria.ca/sunny-day-quiz/" data-hashtags="sunnydays" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`);
     }
 }
 
 app.events = function () {
     // when page loads, immediately hide the questions and results. when you click the input with the name of take quiz, show the questions section 
-    // $('.questions__wrapper').hide();
-    // $('footer').hide();
-    // $('.results__wrapper').hide();
+
 
     $('.takeQuiz').on('click', function () {
         $('.header__wrapper').hide();
@@ -108,18 +109,13 @@ app.events = function () {
         $(`footer`).fadeIn();
     });
 
-    $('.reset').on('click', function () {
-        $('.header__wrapper').fadeIn();
-        $('.questions__wrapper').hide();
-        $('footer').hide();
-        $('.results__wrapper').hide();
-    })
-
     $('.results__wrapper').on('click', '.reset', function () {
-        $('.header__wrapper').fadeIn();
-        $('.questions__wrapper').hide();
+        $('form').trigger("reset");
+        $('.questions__wrapper').fadeIn();
+        $('.header__wrapper').hide();
         $('footer').hide();
         $('.results__wrapper').hide();
+        
     })
 }
 app.init = function () {
